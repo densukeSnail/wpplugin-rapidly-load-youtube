@@ -2,34 +2,56 @@
     display: inline-block;
     position: relative;
     overflow:hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+}
+
+.dn_thum_youtube_video_hide:hover {
+    opacity: 0.8;
+    cursor:pointer;
 }
 
 .dn_thum_youtube_video_hide iframe{
     display: none;
 }
 
-.dn_thum_youtube_video_hide:before {
-    position: absolute;
-    content: "Click to Play";
-    color: #fff;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0,0,0,0.4);
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
-
-.dn_thum_youtube_video_hide:hover:before {
-    background-color: rgba(0,0,0,0.2);
-}
-
-.dn_thum_youtube_thum_img{
-    vertical-align:top;
-}
-
-.dn_thum_youtube_video_show .dn_thum_youtube_thum_img{
+.dn_thum_youtube_video_show span{
     display: none;
+}
+
+.dn_thum_youtube_video_title{
+    display: block;
+    margin: 0;
+    line-height: calc(1em + 5px);
+    padding: 5px 0 25px 10px;
+    color: #ffffff;
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0));
+}
+
+.dn_thum_youtube_video_title a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.dn_thum_youtube_video_title a:hover {
+    text-decoration: none;
+}
+
+.dn_thum_youtube_video_clickplay {
+    display: block;
+    position: absolute;
+    top: calc(50% - 22px);
+    left: calc(50% - 32px);
+    background-image: url("../images/youtube_social_icon_dark.png");
+    width: 64px;
+    height: 45px;
+    opacity:0.8;
+}
+
+.dn_thum_youtube_video_hide:hover .dn_thum_youtube_video_clickplay{
+    background-image:url("../images/youtube_social_icon_red.png");
+    opacity:1.0;
 }

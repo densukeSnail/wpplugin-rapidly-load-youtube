@@ -1,0 +1,12 @@
+ul{
+    list-style: disc;
+    padding-left:30px;
+}
+
+ul li{
+    margin-bottom: 20px;
+}
+
+input[name="dn_thum_youtube_option_movie_num"] {
+    width: 60px;
+}
